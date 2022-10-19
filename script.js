@@ -2,8 +2,15 @@
 //Variables: Strings = Rock, Paper, Scissors???
 
 //Variable: User Input = Prompt: Choose Rock, Paper, Scissors
+let user = prompt("Rock, Paper, Scissors");
 
 //Varaible: Random Computer Input = One of Three Above Variables
+//Math Random
+let computer = Math.floor(Math.random() * 3);
+//Convert to String
+// 0 is Rock
+//1 is Paper
+//2 is Scissors
 
 //If... Else Statement:
 //User === Rock && Computer === Rock
