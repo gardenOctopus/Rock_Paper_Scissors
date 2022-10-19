@@ -1,47 +1,53 @@
-//Title: Rock, Paper, Scissors
+//Title: rock, paper, scissors
 
-//Variable: User Input = Prompt: Choose Rock, Paper, Scissors
+//Variable: User Input = Prompt: Choose rock, paper, scissors
 function getUserChoice() {
-    let user = prompt("Rock, Paper, Scissors");
+    let user = prompt("rock, paper, scissors");
+    return user.toLowerCase();
 }
 
 //Varaible: Random Computer Input = One of Three Above Variables with Math Random
 function getComputerChoice() {
     let computer = Math.floor(Math.random() * 3);
-    //Convert to String: 0 is Rock, 1 is Paper, 2 is Scissors
+    //Convert to String: 0 is rock, 1 is paper, 2 is scissors
     if (computer === 0) {
-        computer = "Rock";
+        computer = "rock";
     } else if (computer === 1) {
-        computer = "Paper";
+        computer = "paper";
     } else {
-        computer = "Scissors";
+        computer = "scissors";
     }
     return computer;
 }
 
 //If... Else Statement:
 function playRound (user, computer) {
-    if (user === "Rock" && computer === "Rock") {
-        console.log("Tie");
-    } else if (user === "Rock" && computer === "Paper") {
-        console.log("You Lose!");
-    } else if (user === "Rock" && computer === "Scissors") {
-        console.log("You Win!");
-    } else if (user === "Paper" && computer === "Paper") {
-        console.log("Tie");
-    } else if (user === "Paper" && computer === "Rock") {
-        console.log("You Win!");
-    } else if (user === "Paper" && computer === "Scissors") {
-        console.log("You Lose!");
-    } else if (user === "Scissors" && computer === "Scissors") {
-        console.log("Tie");
-    } else if (user === "Scissors" && computer === "Paper") {
-        console.log("You Win!");
-    } else if (user === "Scissors" && computer === "Rock") {
-        console.log("You Lose!");
+    if (user === "rock" && computer === "rock") {
+        return "Tie";
+    } else if (user === "rock" && computer === "paper") {
+        return "You Lose!";
+    } else if (user === "rock" && computer === "scissors") {
+        return "You Win!";
+    } else if (user === "paper" && computer === "paper") {
+        return "Tie";
+    } else if (user === "paper" && computer === "rock") {
+        return "You Win!";
+    } else if (user === "paper" && computer === "scissors") {
+        return "You Lose!";
+    } else if (user === "scissors" && computer === "scissors") {
+        return "Tie";
+    } else if (user === "scissors" && computer === "paper") {
+        return "You Win!";
+    } else if (user === "scissors" && computer === "rock") {
+        return "You Lose!";
     } else {
-        console.log("Please type proper answers... @.@");
+        return "Please type proper answers... @.@";
     }
 }
+
+const user = getUserChoice();
+const computer = getComputerChoice();
+console.log(computer);
+console.log(playRound(user, computer));
 
 
