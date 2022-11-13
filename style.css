@@ -73,12 +73,24 @@ button.blue {
     background-color: #4b4bffff;
 }
 
+button.blue:hover {
+    background-color: #0000c8ff;
+}
+
 button.pink {
     background-color: #ff4b4bff;
 }
 
+button.pink:hover {
+    background-color: #c80000ff;
+}
+
 button.green {
     background-color: #24ff24ff;
+}
+
+button.green:hover {
+    background-color: #00c800ff;
 }
 
 #computer-choice {
