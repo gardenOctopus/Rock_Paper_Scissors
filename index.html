@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Rock, Paper, Scissors</title>
         <script type="text/javascript" src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <h1>
@@ -11,21 +12,38 @@
             <span class="paper-colour">Paper</span>
             <span class="scissors-colour">Scissors</span>
         </h1>
-        <div class="score">
-            0
-        </div>
-        <p>User Score</p>
-        <div class="buttons">
-            <button>Rock</button>
-            <button>Paper</button>
-            <button>Scissors</button>
-        </div>
-        <div class="score">
-            0
-        </div>
-        <p>Computer Score</p>
-        <div id="computer-choice">
-
+        <div class="container">
+            <div class="user-container">
+                <div class="score">
+                    0
+                </div>
+                <p>User Score</p>
+                <div class="buttons">
+                    <button class="blue">
+                        <img src="images/stone.png" width="50px" height="50px">
+                        <br>
+                        Rock
+                    </button>
+                    <button class="pink">
+                        <img src="images/paper.png" width="50px" height="50px">
+                        <br>
+                        Paper
+                    </button>
+                    <button class="green">
+                        <img src="images/scissors.png" width="50px" height="50px">
+                        <br>
+                        Scissors
+                    </button>
+                </div>
+            </div>
+            <div class="computer-container">
+                <div class="score">
+                    0
+                </div>
+                <p>Computer Score</p>
+                <div id="computer-choice">
+                </div>
+            </div>
         </div>
     </body>
 </html>
