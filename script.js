@@ -46,12 +46,12 @@ function playRound (user, computer) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
+//    for (let i = 0; i < 5; i++) {
         let user = getUserChoice();
         let computer = getComputerChoice();
         console.log(computer);
         console.log(playRound(user, computer));
-     }
+//    }
 }
 
 game();
