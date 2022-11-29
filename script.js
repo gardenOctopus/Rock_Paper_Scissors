@@ -1,7 +1,13 @@
 //Title: rock, paper, scissors
 
+//Buttons
+document.querySelector('#rock').addEventListener('click', game);
+document.querySelector('#paper').addEventListener('click', game);
+document.querySelector('#scissors').addEventListener('click', game);
+
+
 //Variable: User Input = Prompt: Choose rock, paper, scissors
-function getUserChoice() {
+function game() {
     let user = prompt("rock, paper, scissors");
     return user.toLowerCase();
 }
@@ -46,15 +52,15 @@ function playRound (user, computer) {
 }
 
 function game() {
-//    for (let i = 0; i < 5; i++) {
-        let user = getUserChoice();
+    for (let i = 0; i < 5; i++) {
+        let user = game();
         let computer = getComputerChoice();
         console.log(computer);
         console.log(playRound(user, computer));
-//    }
+    }
 }
 
-game();
+//game();
 
 
 

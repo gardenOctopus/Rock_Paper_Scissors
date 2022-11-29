@@ -73,7 +73,7 @@ button.blue {
     background-color: #4b4bffff;
 }
 
-button.blue:hover {
+button.blue:active {
     background-color: #0000c8ff;
 }
 
@@ -81,7 +81,7 @@ button.pink {
     background-color: #ff4b4bff;
 }
 
-button.pink:hover {
+button.pink:active {
     background-color: #c80000ff;
 }
 
@@ -89,7 +89,7 @@ button.green {
     background-color: #24ff24ff;
 }
 
-button.green:hover {
+button.green:active {
     background-color: #00c800ff;
 }
 

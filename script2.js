@@ -1,17 +1,45 @@
-//Selects Buttons & Adds Function
-
-let userChoice; 
-
 //Reassign variable with button click
+document.querySelector('#rock').addEventListener('click', () => game('rock'));
+document.querySelector('#paper').addEventListener('click', () => game('paper'));
+document.querySelector('#scissors').addEventListener('click', () => game('scissors'));
 
-const rock = document.querySelector('#rock');
-rock.onclick = () => {userChoice = 'rock'};
-console.log(userChoice);
+//Varaible: Random Computer Input = One of Three Above Variables with Math Random
+function getComputerChoice() {
+    let computer = Math.floor(Math.random() * 3);
+    //Convert to String: 0 is rock, 1 is paper, 2 is scissors
+    if (computer === 0) {
+        computer = "rock";
+    } else if (computer === 1) {
+        computer = "paper";
+    } else {
+        computer = "scissors";
+    }
+    return computer;
+};
 
-const paper = document.querySelector('#paper');
-paper.onclick = () => {alert('B')};
+//If... Else Statement:
+function playRound (user, computer) {
+    if (user === computer) {
+        return "Tie";
+    } else if (user === "rock" && computer === "paper") {
+        return "You Lose!";
+    } else if (user === "rock" && computer === "scissors") {
+        return "You Win!";
+    } else if (user === "paper" && computer === "rock") {
+        return "You Win!";
+    } else if (user === "paper" && computer === "scissors") {
+        return "You Lose!";
+    } else if (user === "scissors" && computer === "paper") {
+        return "You Win!";
+    } else {
+        return "You Lose!";
+    } 
+};
 
-const scissors = document.querySelector('#scissors');
-scissors.onclick = () => {alert('C')};
-
+//Gets User Input && Plays Round
+function game(e) {
+    let user = e;
+    let computer = getComputerChoice();
+    alert(playRound(user, computer));
+};
 
