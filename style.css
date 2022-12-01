@@ -64,7 +64,6 @@ button {
     color: #fff;
     font-size: 20px;    
     font-family: Comfortaa;
-    font-weight: 900;
     border: none;
     border-radius: 50%;
 }
@@ -93,10 +92,35 @@ button.green:active {
     background-color: #00c800ff;
 }
 
-#computer-choice {
+#computer-choice, #comp-rock, #comp-paper, #comp-scissors {
     margin-top: 30px;
     background-color: #a5a5a5ff;
     height: 120px;
     width: 120px;
     border-radius: 50%;
+    color: #fff;
+    font-size: 20px;    
+    font-family: Comfortaa;
 }
+
+#comp-rock, #comp-paper, #comp-scissors {
+    background-color: #0000c8ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#comp-rock {
+    background-color: #0000c8ff;
+}
+
+#comp-paper {
+    background-color: #c80000ff;
+}
+
+#comp-scissors {
+    background-color: #00c800ff;
+}
+

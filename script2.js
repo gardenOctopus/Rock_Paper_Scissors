@@ -3,6 +3,31 @@ document.querySelector('#rock').addEventListener('click', () => game('rock'));
 document.querySelector('#paper').addEventListener('click', () => game('paper'));
 document.querySelector('#scissors').addEventListener('click', () => game('scissors'));
 
+//Displays Computer Choice in DIV
+function displayComputerChoice(computer) {
+    const rock = document.querySelector('#comp-rock');
+    const paper = document.querySelector('#comp-paper');
+    const scissors = document.querySelector('#comp-scissors');
+    const none = document.querySelector('#computer-choice');
+    
+    if (computer === 'rock') {
+        rock.style.display = 'flex';
+        none.style.display = 'none';
+        paper.style.display = 'none';
+        scissors.style.display = 'none';
+    } else if (computer === 'paper') {
+        paper.style.display = 'flex';
+        none.style.display = 'none';
+        rock.style.display = 'none';
+        scissors.style.display = 'none';
+    } else {
+        scissors.style.display = 'flex';
+        none.style.display = 'none';
+        paper.style.display = 'none';
+        rock.style.display = 'none';
+    } 
+};
+
 //Varaible: Random Computer Input = One of Three Above Variables with Math Random
 function getComputerChoice() {
     let computer = Math.floor(Math.random() * 3);
@@ -14,6 +39,7 @@ function getComputerChoice() {
     } else {
         computer = "scissors";
     }
+    displayComputerChoice(computer);
     return computer;
 };
 
@@ -40,6 +66,6 @@ function playRound (user, computer) {
 function game(e) {
     let user = e;
     let computer = getComputerChoice();
-    alert(playRound(user, computer));
+    playRound(user, computer);
 };
 
