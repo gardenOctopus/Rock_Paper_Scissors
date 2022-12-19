@@ -9,6 +9,14 @@ body {
     color: #a5a5a5ff;
 }
 
+#result {
+    text-align: center;
+    font-size: 30px; 
+    font-weight: bolder;
+    margin: 30px; 
+    height: 30px;
+}
+
 .container {
     padding: 50px;
     display: flex;
