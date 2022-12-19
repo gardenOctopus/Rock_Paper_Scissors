@@ -62,20 +62,6 @@ function playRound (user, computer) {
     } 
 };
 
-function score() {
-    //Grabs empty score divs
-    let userScore = document.querySelector('#user-score');
-    let compScore = document.querySelector('#comp-score');
-    //Creates initial value
-    let USCount = 0;
-    let CSCount = 0; 
-    //Inserts initial value
-    userScore.innerText = `${USCount}`;
-    compScore.innerText = `${CSCount}`;
-    //Grabs playRound result
-};
-
-
 //Gets User Input && Plays Round
 function game(e) {
     let user = e;
@@ -83,5 +69,25 @@ function game(e) {
     let result = playRound(user, computer);
     let resultDisplay = document.querySelector('#result');
     resultDisplay.innerText = `${result}`; 
+    //Adds Score
+    if (result === "You Win!") {
+        USCount++;
+        userScore.innerText = `${USCount}`;
+    } else if (result === "You Lose!") {
+        CSCount++;
+        compScore.innerText = `${CSCount}`;
+    }
 };
+
+
+//Calculate Score
+//Grabs empty score divs
+let userScore = document.querySelector('#user-score');
+let compScore = document.querySelector('#comp-score');
+//Creates initial value
+let USCount = 0;
+let CSCount = 0; 
+//Inserts initial value
+userScore.innerText = `${USCount}`;
+compScore.innerText = `${CSCount}`;
 
