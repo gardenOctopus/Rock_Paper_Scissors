@@ -64,11 +64,18 @@ function playRound (user, computer) {
 
 //Gets User Input && Plays Round
 function game(e) {
+    //Adds Round Number
+    gamePlay += 1;
+    //Grabs User Selecton && Stores in Variable
     let user = e;
+    //Grabs Computer Selection && Stores in Variable
     let computer = getComputerChoice();
+    //Gets Game Result && Stores in Variable
     let result = playRound(user, computer);
+    //Grabs Empty Div to Store Result
     let resultDisplay = document.querySelector('#result');
-    resultDisplay.innerText = `${result}`; 
+    //Displays Result
+    resultDisplay.innerText = `${result} Round ${gamePlay}`; 
     //Adds Score
     if (result === "You Win!") {
         USCount++;
@@ -77,10 +84,19 @@ function game(e) {
         CSCount++;
         compScore.innerText = `${CSCount}`;
     }
+    //Ends Game After Five Rounds
+    if (gamePlay > 5) {
+        if (USCount > CSCount) {
+            resultDisplay.innerText = "Final Result: You Win!";
+        } else if (CSCount > USCount) {
+            resultDisplay.innerText = "Final Result: You Lose!";
+        } else {
+            resultDisplay.innerText = "Final Result: Tie";
+        }
+    } 
 };
 
-
-//Calculate Score
+//Global Variables for Calculating Score
 //Grabs empty score divs
 let userScore = document.querySelector('#user-score');
 let compScore = document.querySelector('#comp-score');
@@ -91,3 +107,5 @@ let CSCount = 0;
 userScore.innerText = `${USCount}`;
 compScore.innerText = `${CSCount}`;
 
+//Counts How Many Times the Game Function Has Been Called
+let gamePlay = 0;
