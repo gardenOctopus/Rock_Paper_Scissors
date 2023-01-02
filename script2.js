@@ -47,18 +47,14 @@ function getComputerChoice() {
 function playRound (user, computer) {
     if (user === computer) {
         return "Tie";
-    } else if (user === "rock" && computer === "paper") {
-        return "You Lose!";
     } else if (user === "rock" && computer === "scissors") {
-        return "You Win!";
+        return "You Win";
     } else if (user === "paper" && computer === "rock") {
-        return "You Win!";
-    } else if (user === "paper" && computer === "scissors") {
-        return "You Lose!";
+        return "You Win";
     } else if (user === "scissors" && computer === "paper") {
-        return "You Win!";
+        return "You Win";
     } else {
-        return "You Lose!";
+        return "You Lose";
     } 
 };
 
@@ -77,15 +73,15 @@ function game(e) {
     //Displays Result
     resultDisplay.innerText = `${result} Round ${gamePlay}`; 
     //Adds Score
-    if (result === "You Win!") {
+    if (result === "You Win") {
         USCount++;
         userScore.innerText = `${USCount}`;
-    } else if (result === "You Lose!") {
+    } else if (result === "You Lose") {
         CSCount++;
         compScore.innerText = `${CSCount}`;
     }
     //Ends Game After Five Rounds
-    if (gamePlay > 5) {
+    if (gamePlay > 4) {
         if (USCount > CSCount) {
             resultDisplay.innerText = "Final Result: You Win!";
         } else if (CSCount > USCount) {
