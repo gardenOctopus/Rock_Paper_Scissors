@@ -81,7 +81,10 @@ function game(e) {
         compScore.innerText = `${CSCount}`;
     }
     //Ends Game After Five Rounds
-    if (gamePlay > 4) {
+    if (USCount > 4 || CSCount > 4) {
+        document.querySelector('#rock').disabled = true;
+        document.querySelector('#paper').disabled = true;
+        document.querySelector('#scissors').disabled = true;
         if (USCount > CSCount) {
             resultDisplay.innerText = "Final Result: You Win!";
         } else if (CSCount > USCount) {
