@@ -2,6 +2,7 @@
 document.querySelector('#rock').addEventListener('click', () => game('rock'));
 document.querySelector('#paper').addEventListener('click', () => game('paper'));
 document.querySelector('#scissors').addEventListener('click', () => game('scissors'));
+document.querySelector('.again').addEventListener('click', () => window.location.reload());
 
 //Displays Computer Choice in DIV
 function displayComputerChoice(computer) {
@@ -80,11 +81,14 @@ function game(e) {
         CSCount++;
         compScore.innerText = `${CSCount}`;
     }
-    //Ends Game After Five Rounds
+    //Ends Game After Winner
     if (USCount > 4 || CSCount > 4) {
         document.querySelector('#rock').disabled = true;
         document.querySelector('#paper').disabled = true;
         document.querySelector('#scissors').disabled = true;
+        //Show Replay Button
+        const replay = document.querySelector('.again');
+        replay.style.display = "block";
         if (USCount > CSCount) {
             resultDisplay.innerText = "Final Result: You Win!";
         } else if (CSCount > USCount) {
