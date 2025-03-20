@@ -42,15 +42,15 @@ body {
 }
 
 .rock-colour {
-    color: #4b4bffff;
+    color: #7eaccc;
 }
 
 .paper-colour {
-    color: #ff4b4bff;
+    color: #cc7eac;
 }
 
 .scissors-colour {
-    color: #24ff24ff; 
+    color: #accc7e;
 }
 
 h1 {
@@ -91,30 +91,6 @@ button.again {
     display: none;
 }
 
-button.blue {
-    background-color: #4b4bffff;
-}
-
-button.blue:active {
-    background-color: #0000c8ff;
-}
-
-button.pink {
-    background-color: #ff4b4bff;
-}
-
-button.pink:active {
-    background-color: #c80000ff;
-}
-
-button.green {
-    background-color: #24ff24ff;
-}
-
-button.green:active {
-    background-color: #00c800ff;
-}
-
 #computer-choice, #comp-rock, #comp-paper, #comp-scissors {
     margin-top: 30px;
     background-color: #a5a5a5ff;
@@ -127,7 +103,6 @@ button.green:active {
 }
 
 #comp-rock, #comp-paper, #comp-scissors {
-    background-color: #0000c8ff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,15 +110,27 @@ button.green:active {
     display: none;
 }
 
-#comp-rock {
-    background-color: #0000c8ff;
+button.blue, #comp-rock {
+    background-color: #7eaccc;
 }
 
-#comp-paper {
-    background-color: #c80000ff;
+button.blue:active {
+    background-color: #3796da;
 }
 
-#comp-scissors {
-    background-color: #00c800ff;
+button.pink, #comp-paper {
+    background-color: #cc7eac;
+}
+
+button.pink:active {
+    background-color: #c72f88;
+}
+
+button.green, #comp-scissors {
+    background-color: #accc7e;
+}
+
+button.green:active {
+    background-color: #8bca31;
 }
 

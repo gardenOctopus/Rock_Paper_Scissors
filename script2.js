@@ -10,26 +10,29 @@ function displayComputerChoice(computer) {
     const paper = document.querySelector('#comp-paper');
     const scissors = document.querySelector('#comp-scissors');
     const none = document.querySelector('#computer-choice');
-    
+
+    //Hides all other displays
+    function hide() {
+        rock.style.display = 'none';
+        none.style.display = 'none';
+        paper.style.display = 'none';
+        scissors.style.display = 'none';
+    }
+
+    //There is a lot of repeat code here. Fix this!
     if (computer === 'rock') {
+        hide();
         rock.style.display = 'flex';
-        none.style.display = 'none';
-        paper.style.display = 'none';
-        scissors.style.display = 'none';
     } else if (computer === 'paper') {
+        hide();
         paper.style.display = 'flex';
-        none.style.display = 'none';
-        rock.style.display = 'none';
-        scissors.style.display = 'none';
     } else {
+        hide();
         scissors.style.display = 'flex';
-        none.style.display = 'none';
-        paper.style.display = 'none';
-        rock.style.display = 'none';
     } 
 };
 
-//Varaible: Random Computer Input = One of Three Above Variables with Math Random
+//Variable: Random Computer Input = One of Three Above Variables with Math Random
 function getComputerChoice() {
     let computer = Math.floor(Math.random() * 3);
     //Convert to String: 0 is rock, 1 is paper, 2 is scissors
@@ -44,7 +47,7 @@ function getComputerChoice() {
     return computer;
 };
 
-//If... Else Statement:
+//Determines who wins 
 function playRound (user, computer) {
     if (user === computer) {
         return "Tie";
