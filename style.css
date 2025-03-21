@@ -7,7 +7,7 @@
 body {
     font-family: Comfortaa; 
     color: #a5a5a5ff;
-    background-color: #103753;
+    background-color: #fff;
 }
 
 #result {
@@ -66,8 +66,8 @@ h1 {
 }
 
 p {
-    font-size: 20px;
-    font-weight: 100;
+    font-size: 25px;
+    font-weight: bolder;
 }
 
 button {
@@ -118,12 +118,24 @@ button.again {
     background-color: #7eaccc;
 }
 
+.blue:active {
+    background-color: #006fbe;
+}
+
 .pink {
     background-color: #cc7eac;
 }
 
+.pink:active {
+    background-color: #c40072;
+}
+
 .green {
     background-color: #accc7e;
+}
+
+.green:active {
+    background-color: #6fbe00;
 }
 
 img {
