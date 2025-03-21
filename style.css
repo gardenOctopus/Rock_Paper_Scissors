@@ -125,3 +125,9 @@ button.again {
 .green {
     background-color: #accc7e;
 }
+
+img {
+    width: 125px;
+    height: 125px;
+    margin-bottom: 20px;
+}
