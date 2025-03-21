@@ -7,6 +7,7 @@
 body {
     font-family: Comfortaa; 
     color: #a5a5a5ff;
+    background-color: #103753;
 }
 
 #result {
@@ -73,8 +74,8 @@ button {
     margin-top: 30px;
     margin-left: 5px;
     margin-right: 5px;
-    height: 120px;
-    width: 120px;
+    height: 250px;
+    width: 250px;
     color: #fff;
     font-size: 20px;    
     font-family: Comfortaa;
@@ -94,8 +95,8 @@ button.again {
 #computer-choice, #comp-rock, #comp-paper, #comp-scissors {
     margin-top: 30px;
     background-color: #a5a5a5ff;
-    height: 120px;
-    width: 120px;
+    height: 250px;
+    width: 250px;
     border-radius: 50%;
     color: #fff;
     font-size: 20px;    
@@ -109,28 +110,3 @@ button.again {
     justify-content: center;
     display: none;
 }
-
-button.blue, #comp-rock {
-    background-color: #7eaccc;
-}
-
-button.blue:active {
-    background-color: #3796da;
-}
-
-button.pink, #comp-paper {
-    background-color: #cc7eac;
-}
-
-button.pink:active {
-    background-color: #c72f88;
-}
-
-button.green, #comp-scissors {
-    background-color: #accc7e;
-}
-
-button.green:active {
-    background-color: #8bca31;
-}
-
