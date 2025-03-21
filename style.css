@@ -94,7 +94,6 @@ button.again {
 
 #computer-choice, #comp-rock, #comp-paper, #comp-scissors {
     margin-top: 30px;
-    background-color: #a5a5a5ff;
     height: 250px;
     width: 250px;
     border-radius: 50%;
@@ -103,10 +102,26 @@ button.again {
     font-family: Comfortaa;
 }
 
+#computer-choice {
+    background-color: #a5a5a5ff;
+}
+
 #comp-rock, #comp-paper, #comp-scissors {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     display: none;
+}
+
+.blue {
+    background-color: #7eaccc;
+}
+
+.pink {
+    background-color: #cc7eac;
+}
+
+.green {
+    background-color: #accc7e;
 }
