@@ -146,6 +146,27 @@ img {
 
 @media only screen and (max-width: 1210px) {
     button, #computer-choice, #comp-rock, #comp-paper, #comp-scissors {
+      width: 150px;
+      height: 150px;
+    }
+
+    img {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    button, #computer-choice, #comp-rock, #comp-paper, #comp-scissors {
       width: 100px;
       height: 100px;
     }
@@ -157,10 +178,14 @@ img {
     }
 
     p {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     h1 {
         font-size: 40px;
+    }
+
+    #result {
+        margin: 20px;
     }
   }
